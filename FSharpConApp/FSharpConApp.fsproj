@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="DisplayFunctions.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
