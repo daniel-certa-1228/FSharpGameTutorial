@@ -65,3 +65,12 @@ module World =
             Rabbit = actors.[4]
         }
 
+    let getCharacterAtCell(x, y) (world:World) =
+      let actorAtCell =
+        world.Actors
+        |> Seq.tryFind(fun actor -> actor.Pos.X = x && actor.Pos.Y = y)
+
+      match actorAtCell with
+      | Some actor -> getChar actor
+      | None -> '.'
+
